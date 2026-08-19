@@ -1,3 +1,5 @@
+import 'package:doctor_hunt/apps/core/themes/app_colors.dart';
+import 'package:doctor_hunt/generated/style_atoms.dart';
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
@@ -22,21 +24,24 @@ class CustomTextField extends StatelessWidget {
       controller: controller,
       obscureText: obscureText,
       keyboardType: keyboardType,
-      style: const TextStyle(fontSize: 14, color: Color(0xFF333333)),
+      style: context.regular14TextMain,
       decoration: InputDecoration(
         hintText: hintText,
-        hintStyle: const TextStyle(color: Color(0xFF677294), fontSize: 14),
+        hintStyle: context.regular14TextSub,
         filled: true,
-        fillColor: Colors.white,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+        fillColor: AppColors.white,
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
         suffixIcon: suffixIcon,
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: Color(0xFFE5E5E5), width: 1),
+          borderSide:
+              const BorderSide(color: AppColors.textBorders, width: 1),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
-          borderSide: const BorderSide(color: Color(0xFF0FCE92), width: 1.5),
+          borderSide:
+              const BorderSide(color: AppColors.primary, width: 1.5),
         ),
       ),
     );

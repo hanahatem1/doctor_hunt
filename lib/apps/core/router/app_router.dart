@@ -1,37 +1,52 @@
-import 'package:doctor_hunt/apps/features/auth/presentation/pages/login_page.dart';
-import 'package:doctor_hunt/apps/features/auth/presentation/pages/sign_up_page.dart';
-import 'package:doctor_hunt/apps/features/on_boarding/pages/on_boarding_pages.dart';
-import 'package:doctor_hunt/apps/features/role_selection/pages/role_selection_screen.dart';
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import '../../features/auth/presentation/screens/login_screen.dart';
+import '../../features/auth/presentation/screens/sign_up_screen.dart';
+import '../../features/on_boarding/screens/onboarding_screen.dart';
+import '../../features/role_selection/screens/role_selection_screen.dart';
 
+part 'app_router.g.dart';
+
+@TypedGoRoute<OnboardingRoute>(path: '/' ,)
+class OnboardingRoute extends GoRouteData with _$OnboardingRoute {
+  const OnboardingRoute();
+
+  @override
+  Widget build(BuildContext context, GoRouterState state) =>
+      const OnboardingScreen();
+}
+
+@TypedGoRoute<RoleSelectionRoute>(path: '/roleSelection')
+class RoleSelectionRoute extends GoRouteData with _$RoleSelectionRoute {
+  const RoleSelectionRoute();
+
+  @override
+  Widget build(BuildContext context, GoRouterState state) =>
+      const RoleSelectionScreen();
+}
+
+@TypedGoRoute<LoginRoute>(path: '/login')
+class LoginRoute extends GoRouteData with _$LoginRoute {
+  const LoginRoute();
+
+  @override
+  Widget build(BuildContext context, GoRouterState state) =>
+      const LoginPage();
+}
+
+@TypedGoRoute<SignUpRoute>(path: '/signUp')
+class SignUpRoute extends GoRouteData with _$SignUpRoute {
+  const SignUpRoute();
+
+  @override
+  Widget build(BuildContext context, GoRouterState state) =>
+      const SignUpPage();
+}
 
 
 abstract class AppRouter {
-
-  static const String kOnboarding = '/';
-  static const String kRoleSelection = '/roleSelection';
-  static const String kLogin = '/login';
-  static const String kSignUp = '/signUp';
-
   static final router = GoRouter(
-    initialLocation: kOnboarding,
-    routes: [
-      GoRoute(
-        path: kOnboarding,
-        builder: (context, state) => const OnboardingScreen(),
-      ),
-      GoRoute(
-        path: kRoleSelection,
-        builder: (context, state) => const RoleSelectionScreen(),
-      ),
-      GoRoute(
-        path: kLogin,
-        builder: (context, state) => const LoginPage(),
-      ),
-      GoRoute(
-        path: kSignUp,
-        builder: (context, state) => const SignUpPage(),
-      ),
-    ],
+    initialLocation: '/',
+    routes: $appRoutes,
   );
 }

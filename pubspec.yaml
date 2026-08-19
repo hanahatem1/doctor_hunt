@@ -1,6 +1,6 @@
 name: doctor_hunt
 description: "A new Flutter project."
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0+1
 
 environment:
@@ -10,14 +10,26 @@ dependencies:
   flutter:
     sdk: flutter
   go_router: ^17.5.0
+  slang: ^4.4.0
+  slang_flutter: ^4.4.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^6.0.0
- 
+  build_runner: ^2.4.15
+  go_router_builder: ^3.0.0
 
 flutter:
   uses-material-design: true
   assets:
-    - assets/images/
+    - assets/png/
+    - assets/translations/
+
+flutter_assets:
+  assets_path: assets/png/
+  output_path: lib/generated/
+  filename: images_assets.dart
+  classname: AppImages
+  field_prefix:
+  ignore_comments: true

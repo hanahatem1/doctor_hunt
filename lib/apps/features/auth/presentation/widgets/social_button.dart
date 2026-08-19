@@ -1,3 +1,6 @@
+import 'package:doctor_hunt/apps/core/themes/app_colors.dart';
+import 'package:doctor_hunt/apps/core/widgets/custom_sized_box.dart';
+import 'package:doctor_hunt/generated/style_atoms.dart';
 import 'package:flutter/material.dart';
 
 class SocialButton extends StatelessWidget {
@@ -21,11 +24,11 @@ class SocialButton extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.symmetric(vertical: 14),
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: AppColors.white,
             borderRadius: BorderRadius.circular(12),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.03),
+                color: AppColors.boxShadow,
                 blurRadius: 10,
                 offset: const Offset(0, 4),
               ),
@@ -35,14 +38,10 @@ class SocialButton extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(iconPath, height: 20, width: 20),
-              const SizedBox(width: 8),
+              8.w,
               Text(
                 title,
-                style: const TextStyle(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w500,
-                  color: Color(0xFF677294),
-                ),
+                style: context.medium14TextSub,
               ),
             ],
           ),

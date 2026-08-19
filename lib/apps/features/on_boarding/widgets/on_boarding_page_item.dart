@@ -1,12 +1,17 @@
+import 'package:doctor_hunt/apps/core/themes/app_colors.dart';
+import 'package:doctor_hunt/apps/core/widgets/custom_button.dart';
+import 'package:doctor_hunt/apps/core/widgets/custom_sized_box.dart';
+import 'package:doctor_hunt/generated/style_atoms.dart';
+import 'package:doctor_hunt/generated/translations.g.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingPageItem extends StatelessWidget {
-  final String centerImage;     
-  final String title;           
-  final String description;     
-  final String buttonText;      
-  final VoidCallback onNextPressed; 
-  final VoidCallback onSkipPressed; 
+  final String centerImage;
+  final String title;
+  final String description;
+  final String buttonText;
+  final VoidCallback onNextPressed;
+  final VoidCallback onSkipPressed;
 
   const OnboardingPageItem({
     super.key,
@@ -22,7 +27,7 @@ class OnboardingPageItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Column(
-        children: [
+        children: [  
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 32.0),
@@ -36,36 +41,28 @@ class OnboardingPageItem extends StatelessWidget {
                       shape: BoxShape.circle,
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.08),
+                          color: AppColors.boxShadow,
                           blurRadius: 20,
                           spreadRadius: 2,
                         ),
                       ],
                       image: DecorationImage(
-                        image: AssetImage(centerImage), 
+                        image: AssetImage(centerImage),
                         fit: BoxFit.cover,
                       ),
                     ),
                   ),
-                  const SizedBox(height: 40),
+                  40.h,
                   Text(
                     title,
                     textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF333333),
-                    ),
+                    style: context.bold24GrayDark,
                   ),
-                  const SizedBox(height: 16),
+                  16.h,
                   Text(
-                    description,
+                    description + description,
                     textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      fontSize: 14,
-                      height: 1.5,
-                      color: Color(0xFF677294),
-                    ),
+                    style: context.regular14TextSub,
                   ),
                 ],
               ),
@@ -73,40 +70,13 @@ class OnboardingPageItem extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 32.0),
-            child: SizedBox(
-              width: double.infinity,
-              height: 52,
-              child: ElevatedButton(
-                onPressed: onNextPressed, 
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF0FCE92),
-                  elevation: 0,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                ),
-                child: Text(
-                  buttonText, 
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-            ),
+            child: CustomButton(title: buttonText, onPress: onNextPressed),
           ),
           TextButton(
-            onPressed: onSkipPressed, 
-            child: const Text(
-              'Skip',
-              style: TextStyle(
-                color: Color(0xFF677294),
-                fontSize: 14,
-              ),
-            ),
+            onPressed: onSkipPressed,
+            child: Text(tr.skip, style: context.regular14TextSub),
           ),
-          const SizedBox(height: 16),
+          16.h,
         ],
       ),
     );

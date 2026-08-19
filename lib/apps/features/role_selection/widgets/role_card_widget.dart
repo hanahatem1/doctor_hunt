@@ -1,3 +1,5 @@
+import 'package:doctor_hunt/apps/core/themes/app_colors.dart';
+import 'package:doctor_hunt/generated/style_atoms.dart';
 import 'package:flutter/material.dart';
 
 class RoleCardWidget extends StatelessWidget {
@@ -24,15 +26,17 @@ class RoleCardWidget extends StatelessWidget {
         duration: const Duration(milliseconds: 200),
         padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: isSelected ? const Color(0xFFF4FAF7) : Colors.white.withOpacity(0.8),
+          color: isSelected
+              ? AppColors.primaryLight
+              : AppColors.white.withValues(alpha: 0.8),
           borderRadius: BorderRadius.circular(16),
           border: Border.all(
-            color: isSelected ? const Color(0xFF0FCE92) : Colors.transparent,
+            color: isSelected ? AppColors.primary : Colors.transparent,
             width: 1.5,
           ),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(0.03),
+              color: AppColors.boxShadow,
               blurRadius: 10,
               offset: const Offset(0, 4),
             ),
@@ -44,11 +48,11 @@ class RoleCardWidget extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: AppColors.white,
                 shape: BoxShape.circle,
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(0.04),
+                    color: AppColors.boxShadow,
                     blurRadius: 6,
                   ),
                 ],
@@ -56,7 +60,6 @@ class RoleCardWidget extends StatelessWidget {
               child: icon,
             ),
             const SizedBox(width: 16),
-
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -66,16 +69,12 @@ class RoleCardWidget extends StatelessWidget {
                     children: [
                       Text(
                         title,
-                        style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF222222),
-                        ),
+                        style: context.bold18TextMain,
                       ),
                       if (isSelected)
                         const Icon(
                           Icons.check_circle,
-                          color: Color(0xFF0FCE92),
+                          color: AppColors.primary,
                           size: 22,
                         ),
                     ],
@@ -83,11 +82,7 @@ class RoleCardWidget extends StatelessWidget {
                   const SizedBox(height: 6),
                   Text(
                     subtitle,
-                    style: const TextStyle(
-                      fontSize: 13,
-                      height: 1.4,
-                      color: Color(0xFF8A94A6),
-                    ),
+                    style: context.regular13Gray,
                   ),
                 ],
               ),
