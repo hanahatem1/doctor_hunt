@@ -1,3 +1,4 @@
+import 'package:doctor_hunt/apps/features/home/presentation/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../features/auth/presentation/screens/login_screen.dart';
@@ -42,7 +43,14 @@ class SignUpRoute extends GoRouteData with _$SignUpRoute {
   Widget build(BuildContext context, GoRouterState state) =>
       const SignUpPage();
 }
+@TypedGoRoute<HomeRoute>(path: '/home')
+class HomeRoute extends GoRouteData with _$HomeRoute {
+  const HomeRoute();
 
+  @override
+  Widget build(BuildContext context, GoRouterState state) =>
+      const HomeScreen();
+}
 
 abstract class AppRouter {
   static final router = GoRouter(

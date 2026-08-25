@@ -27,7 +27,9 @@ class AppColors {
   static const Color successLight = Color(0xFFECF9F5);
   static const Color warning = Color(0xFFF88F2D);
   static const Color warningLight = Color(0xFFFFF6EE);
-
+  
+ static const Color blue = Color(0xFF5B67F7);
+ 
   // Neutrals
   static const Color white = Color(0xFFFFFFFF);
   static const Color black = Color(0xFF000000);
@@ -36,6 +38,7 @@ class AppColors {
   static const Color grayLightHover = Color(0xFFFDF9F6);
   static const Color grayLightActive = Color(0xFFBAB2AA);
   static const Color gray = Color(0xFF8A94A6);
+  static const Color grayLight1 = Color(0xFFF8F9FA);
   static const Color grayHover = Color(0xFF677294);
   static const Color grayActive = Color(0xFF5A5D61);
   static const Color grayDark = Color(0xFF333333);
