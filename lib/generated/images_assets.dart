@@ -19,4 +19,8 @@ class AppImages {
   static const String pngSplash1 = "assets/png/splash1.png";
 
   static const String pngSplash2 = "assets/png/splash2.png";
+
+  static const String pngPtofile ='assets/png/profilee.png';
+
+  static const String pngDoctor = 'assets/png/doctor.png';
 }

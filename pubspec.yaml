@@ -12,6 +12,7 @@ dependencies:
   go_router: ^17.5.0
   slang: ^4.4.0
   slang_flutter: ^4.4.0
+  table_calendar: ^3.2.1
 
 dev_dependencies:
   flutter_test:
