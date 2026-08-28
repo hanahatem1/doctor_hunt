@@ -8,6 +8,7 @@ import 'package:doctor_hunt/generated/images_assets.dart';
 import 'package:go_router/go_router.dart';
 
 
+// CR: Duplicate screen class LoginPage - remove legacy login_page.dart and retain login_screen.dart
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 

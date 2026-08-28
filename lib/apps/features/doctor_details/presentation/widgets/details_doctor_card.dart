@@ -61,6 +61,7 @@ class DetailsDoctorCard extends StatelessWidget {
                   ),
                 ),
               ),
+              // CR: 12.w
               12.h,
               Expanded(
                 child: Column(
@@ -133,9 +134,11 @@ class DetailsDoctorCard extends StatelessWidget {
             SizedBox(
             width: double.infinity,
             height: 40,
+            // CR: use CustomButton
             child: ElevatedButton(
               onPressed: onBookPressed,
               style: ElevatedButton.styleFrom(
+                // CR: Hardcode Colors
                 backgroundColor: const Color(0xFF00C88C),
                 foregroundColor: Colors.white,
                 elevation: 0,
@@ -145,6 +148,7 @@ class DetailsDoctorCard extends StatelessWidget {
               ),
               child: const Text(
                 'Book Now',
+                // CR: Hardcode TextStyle
                 style: TextStyle(
                   fontSize: 14,
                   fontWeight: FontWeight.w600,

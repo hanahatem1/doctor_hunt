@@ -7,6 +7,9 @@ import 'package:doctor_hunt/apps/features/home/presentation/widgets/feature_doct
 import 'package:doctor_hunt/generated/style_atoms.dart';
 import 'package:flutter/material.dart';
 
+// CR: Typo in filename & class name favourite_sceeen.dart -> favourite_screen.dart
+// CR: Hardcode Texts
+
 class FavouriteSceeen extends StatelessWidget {
   const FavouriteSceeen({super.key});
 

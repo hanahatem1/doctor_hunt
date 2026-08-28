@@ -3,6 +3,8 @@ import 'package:doctor_hunt/apps/core/widgets/custom_sized_box.dart';
 import 'package:doctor_hunt/generated/style_atoms.dart';
 import 'package:flutter/material.dart';
 
+// CR: hardcode texts
+
 class DoctorSearchResultCard extends StatelessWidget {
   final String imagePath;
   final String name;
@@ -95,10 +97,7 @@ class DoctorSearchResultCard extends StatelessWidget {
                         ],
                       ),
                       2.h,
-                      Text(
-                        specialty,
-                        style: context.medium13Primary,
-                      ),
+                      Text(specialty, style: context.medium13Primary),
                       4.h,
                       Text(
                         '$yearsOfExperience Years experience',
@@ -149,10 +148,7 @@ class DoctorSearchResultCard extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      'Next Available',
-                      style: context.semiBold13Primary,
-                    ),
+                    Text('Next Available', style: context.semiBold13Primary),
                     4.h,
                     RichText(
                       text: TextSpan(
@@ -173,6 +169,7 @@ class DoctorSearchResultCard extends StatelessWidget {
                 ),
                 SizedBox(
                   height: 36,
+                  // CR: use CustomButton
                   child: ElevatedButton(
                     onPressed: onBookTap,
                     style: ElevatedButton.styleFrom(
@@ -183,10 +180,7 @@ class DoctorSearchResultCard extends StatelessWidget {
                       ),
                       padding: const EdgeInsets.symmetric(horizontal: 20),
                     ),
-                    child: Text(
-                      'Book Now',
-                      style: context.bold13White,
-                    ),
+                    child: Text('Book Now', style: context.bold13White),
                   ),
                 ),
               ],

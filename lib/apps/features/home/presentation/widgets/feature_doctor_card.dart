@@ -109,6 +109,7 @@ class FeatureDoctorCard extends StatelessWidget {
                     text: '\$ ${price.toStringAsFixed(2)}',
                     style: context.bold12Primary
                   ),
+                   // CR: Grammar typo '/ hours' -> '/ hour' and use slang tr.*
                    TextSpan(
                     text: '/ hours',
                     style: context.regular11Gray

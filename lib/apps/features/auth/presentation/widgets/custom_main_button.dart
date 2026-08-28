@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:doctor_hunt/apps/core/themes/app_colors.dart';
 
+// CR: remove this file
 class CustomMainButton extends StatelessWidget {
   final String text;
   final VoidCallback onPressed;
@@ -15,6 +16,7 @@ class CustomMainButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
+      // CR: use CustomButton
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(

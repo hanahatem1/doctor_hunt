@@ -4,6 +4,7 @@ import 'package:doctor_hunt/apps/features/find_doctor.dart/presentation/widgets/
 import 'package:doctor_hunt/apps/features/find_doctor.dart/presentation/widgets/doctor_search_result_list.dart';
 import 'package:flutter/material.dart';
 
+// CR: Rename feature folder from find_doctor.dart to find_doctor
 class FindDoctorScreen extends StatelessWidget {
   const FindDoctorScreen({super.key});
 

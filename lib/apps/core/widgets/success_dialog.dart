@@ -30,6 +30,7 @@ class SuccessDialog extends StatelessWidget {
             size: 60,
           ),
         ),
+        // CR: Localize hardcoded dialog strings using slang tr.*
         24.h,
          Text(
           'Thank You !',
@@ -51,6 +52,7 @@ class SuccessDialog extends StatelessWidget {
         SizedBox(
           width: double.infinity,
           height: 48,
+          // CR: use CustomButton
           child: ElevatedButton(
             onPressed: () {
               Navigator.pop(context);

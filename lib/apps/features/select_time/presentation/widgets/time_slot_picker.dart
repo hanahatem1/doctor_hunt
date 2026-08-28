@@ -36,6 +36,7 @@ class _TimeSlotPickerState extends State<TimeSlotPicker> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        // CR: Localize hardcoded slot section headers using slang tr.*
         Text(
           'Afternoon ${afternoonSlots.length} slots',
           style: context.bold16TextMain,

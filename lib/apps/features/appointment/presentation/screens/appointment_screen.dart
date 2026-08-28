@@ -11,9 +11,11 @@ class AppointmentScreen extends StatelessWidget {
     return AuthBackground(
       child: Scaffold(
         backgroundColor: Colors.transparent,
+        // CR: Hardcode text
         appBar: CustomAppBar(title:'Appointment'),
         body: Column(
           children: [
+            // CR: طلاما الكود هيبقي جواه widget واحد ف مش مستاهله يحصل extract widget خليه كلو في نفس الفايل
             CalenderCard()
           ],
         ),

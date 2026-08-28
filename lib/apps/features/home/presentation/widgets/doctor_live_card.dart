@@ -39,6 +39,7 @@ class DoctorLiveCard extends StatelessWidget {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Icon(Icons.circle, color: AppColors.white, size: 6),
+                  // CR: 4.w 
                   4.h,
                   Text(
                     'LIVE',

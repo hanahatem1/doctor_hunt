@@ -56,6 +56,7 @@ class PopularDoctorCard extends StatelessWidget {
                 textAlign: TextAlign.center,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
+                // CR: Hardcode TextStyle - use context.bold12Black
                 style: const TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.bold,

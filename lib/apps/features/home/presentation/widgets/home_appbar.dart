@@ -2,6 +2,7 @@ import 'package:doctor_hunt/apps/core/themes/app_colors.dart';
 import 'package:doctor_hunt/apps/core/widgets/custom_sized_box.dart';
 import 'package:doctor_hunt/generated/images_assets.dart';
 import 'package:flutter/material.dart';
+// CR: Hardcode Texts
 
 class HomeAppbar extends StatelessWidget implements PreferredSizeWidget {
   const HomeAppbar({super.key});

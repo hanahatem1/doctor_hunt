@@ -7,7 +7,7 @@ import 'package:doctor_hunt/apps/features/home/presentation/widgets/popular_card
 import 'package:doctor_hunt/apps/features/home/presentation/widgets/special_category_list.dart';
 import 'package:doctor_hunt/generated/style_atoms.dart';
 import 'package:flutter/material.dart';
-
+// CR: Hardcode Texts
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 

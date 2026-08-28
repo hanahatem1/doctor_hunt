@@ -8,6 +8,7 @@ import '../../features/role_selection/screens/role_selection_screen.dart';
 
 part 'app_router.g.dart';
 
+// CR: Missing typed routes for DoctorDetails, SelectTimeScreen, AppointmentScreen, FindDoctorScreen, FavouriteScreen, SplashScreen
 @TypedGoRoute<OnboardingRoute>(path: '/' ,)
 class OnboardingRoute extends GoRouteData with _$OnboardingRoute {
   const OnboardingRoute();

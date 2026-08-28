@@ -63,6 +63,7 @@ class FavDoctorCard extends StatelessWidget {
                     width: 75,
                     height: 75,
                     decoration: const BoxDecoration(
+                      // CR: Hardcode Colors
                       color: Color(0xFFE8F1F9),
                       shape: BoxShape.circle,
                     ),

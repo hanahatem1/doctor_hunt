@@ -33,6 +33,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // CR: don't add expanded in scaffold just stack is enough
       body: Expanded(
         child: Stack(
           children: [

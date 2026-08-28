@@ -33,6 +33,7 @@ class CustomSearchBar extends StatelessWidget {
       child: TextField(
         controller: controller,
         onChanged: onChanged,
+        // CR: Hardcoded TextStyle - use context.regular14Black & context.regular14Gray
         style: const TextStyle(
           fontSize: 14,
           color: AppColors.black,
